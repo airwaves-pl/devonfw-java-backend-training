@@ -91,7 +91,9 @@ public interface ItemRepository extends DefaultRepository<ItemEntity> {
 			}
 		}
 	}
-	
+
 	public Set<ItemEntity> findByName(String name);
+
+	public Page<ItemEntity> findByNameLike(String name, Pageable pageable);
 
 }
